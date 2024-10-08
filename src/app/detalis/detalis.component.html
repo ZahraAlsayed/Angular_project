@@ -1,0 +1,28 @@
+<div class="container mt-5" *ngIf="product">
+  <div class="row">
+    <!-- صورة المنتج -->
+    <div class="col-md-6">
+      <img [src]="product.image" class="img-fluid" alt="{{ product.title }}"
+        style="max-height: 400px; object-fit: contain;">
+    </div>
+
+    <!-- تفاصيل المنتج -->
+    <div class="col-md-6">
+      <h2>{{ product.title }}</h2>
+      <p><strong>Category:</strong> {{ product.category }}</p>
+      <p><strong>Description:</strong> {{ product.description }}</p>
+      <p><strong>Price:</strong> ${{ product.price }}</p>
+      <p><strong>Rating:</strong> {{ product.rating?.rate }} ({{ product.rating?.count }} reviews)</p>
+
+      <!-- أزرار لإضافة إلى السلة أو العودة -->
+      <div class="mt-4">
+        <button class="btn btn-custom-outline">
+          <i class="bi bi-cart-plus"></i> أضف إلى السلة
+        </button>
+        <a class="btn btn-custom-outline" [routerLink]="['/']">
+          العودة إلى المنتجات
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

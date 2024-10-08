@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let product of products">
+            <div class="card h-100">
+                <img src="{{ product.image }}" class="card-img-top" alt="{{ product.title }}"
+                    style="max-height: 200px; object-fit: contain;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.title }}</h5>
+                    <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-custom">
+                        <i class="bi bi-cart-plus"></i> أضف الى السلة
+                    </button>
+                    <a class="btn btn-custom-outline" [routerLink]="['/product', product.id]">
+                        عرض التفاصيل
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

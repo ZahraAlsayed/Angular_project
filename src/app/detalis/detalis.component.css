@@ -1,0 +1,9 @@
+.btn-custom {
+    background-color: #ffae00;
+    color: #000;
+}
+
+.btn-custom-outline {
+    border-color: #ffae00;
+    color: #ffae00;
+}

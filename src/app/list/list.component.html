@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="col-sm-9">
+        <div *ngFor="let item of products_data">
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card product-card shadow-sm">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3 text-center">
+                                    <img [src]="item.image" alt="{{item.title}}" class="product-image" />
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <p class="badge bg-warning">{{item.title}}</p>
+                                        </li>
+                                        <li>{{item.description}}</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h2 class="badge bg-warning">Price: ${{item.price}}</h2>
+                                        </li>
+                                        <li>Count: {{item.rating.count}}</li>
+                                    </ul>
+                                    <div class="row">
+                                        <div class="col">
+                                            <a [routerLink]="['/product', item.id]" class="btn btn-primary w-100">تفاصيل
+                                                المنتج</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="row text-center">
+
+        <!-- الفئة الأولى -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <a class="card-body" [routerLink]="['/list',clothing]">
+                    <i class="bi bi-person-standing-dress" style="font-size: 50px;"></i>
+                    <h5 class="card-title mt-3">ملابس</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- الفئة الثانية -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <a class="card-body" [routerLink]="['/list',gold]" >
+                    <i class="bi bi-handbag" style="font-size: 50px;"></i>
+                    <h5 class="card-title mt-3">إكسسوارات</h5>
+                </a>
+            </div>
+        </div>
+
+        <!-- الفئة الثالثة -->
+        <div class="col-md-3">
+            <a class="card h-100 shadow-sm">
+                <div class="card-body" [routerLink]="['/list',electronics]">
+                    <i class="bi bi-laptop" style="font-size: 50px;"></i>
+                    <h5 class="card-title mt-3">إلكترونيات</h5>
+                </div>
+            </a>
+        </div>
+
+        <!-- الفئة الرابعة -->
+        <div class="col-md-3">
+            <div class="card h-100 shadow-sm">
+                <a class="card-body" [routerLink]="['/list',electronics]">
+                    <i class="bi bi-house" style="font-size: 50px;"></i>
+                    <h5 class="card-title mt-3">منزل</h5>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
